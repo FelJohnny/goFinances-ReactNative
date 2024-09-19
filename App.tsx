@@ -17,9 +17,7 @@ export default function App() {
     Poppins_700Bold
   })
 
-  if(!fontsLoaded){
-    return
-  }
+  if(fontsLoaded)
   return (
     <ThemeProvider theme={theme}>
       <Dashboard/>
