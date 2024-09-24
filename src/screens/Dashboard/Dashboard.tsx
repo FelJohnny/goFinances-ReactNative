@@ -1,4 +1,5 @@
 import React from "react";
+import { HighligthCard } from "@/src/components/HighligthCard/HighligthCard";
 
 import { 
     Container,
@@ -12,9 +13,6 @@ import {
     Icon,
     HighligthCards,
  } from "./styles";
-import { HighligthCard } from "@/src/components/HighligthCard/HighligthCard";
-
-
 
 
 export function Dashboard(){
@@ -36,9 +34,24 @@ export function Dashboard(){
             </Header>
 
             <HighligthCards>
-                <HighligthCard/>
-                <HighligthCard/>
-                <HighligthCard/>
+                <HighligthCard 
+                    type="up"
+                    title="Entradas" 
+                    amount="17.400,00" 
+                    lastTransaction="Ultima entrada dia 13 de abril"
+                />
+                <HighligthCard 
+                    type="down"
+                    title="Saidas" 
+                    amount="1.259,00" 
+                    lastTransaction="Ultima saida dia 03 de abril"
+                />
+                <HighligthCard 
+                    type="total"
+                    title="Total" 
+                    amount="16.141,00" 
+                    lastTransaction="01 a 16 de abril"
+                />
             </HighligthCards>
         </Container>
     )
