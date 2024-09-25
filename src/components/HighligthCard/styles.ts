@@ -24,7 +24,9 @@ export const Title = styled.Text<typeProps>`
     font-family:${({theme})=> theme.fonts.regular};
     font-size:${RFValue(14)}px;
     color: ${({theme})=>theme.colors.text_dark};
-`;
+    ${({type})=> type === 'total'&& css`
+        color: ${({theme})=>theme.colors.shape};`};
+  `;
 
 export const Icon = styled(Feather)<typeProps>`
     font-size:${RFValue(40)}px;
@@ -51,6 +53,7 @@ export const LastTransaction = styled.Text`
     font-family:${({theme})=> theme.fonts.regular};
     font-size:${RFValue(12)}px;
     color: ${({theme})=>theme.colors.text};
-    
+    ${(props)=> props.type === 'total'&& css`
+        color: ${({theme})=>theme.colors.shape};`}
 
 `;

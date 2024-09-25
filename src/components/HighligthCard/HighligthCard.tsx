@@ -38,7 +38,8 @@ export function HighligthCard({
             </Header>
             <Footer>
                 <Amount type={type}>{amount}</Amount>
-                    <LastTransaction>{lastTransaction}</LastTransaction>
+                    <LastTransaction type={type}
+                    >{lastTransaction}</LastTransaction>
             </Footer>
         </Container>
     )
